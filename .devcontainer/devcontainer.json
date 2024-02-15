@@ -22,7 +22,14 @@
 	// "features": {},
 	"containerEnv": {
 		"SHELL": "/usr/bin/bash"
-    }
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"fwcd.kotlin"
+			]
+		}
+	}
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
