@@ -12,10 +12,10 @@ jobs:
     permissions: write-all
     runs-on: self-hosted
     container:
-      image: ghcr/codesecure-se/detekt-cso-builder:8.1b0
+      image: ghcr.io/codesecure-se/detekt-cso-builder:8.1b0
       credentials:
         username: ${{ github.actor }}
-        password: ${{ env.GITHUB_TOKEN }}
+        password: ${{ secrets.github_token  }}
     env:
       CAFILE: ".github/github.cert.pem" 
       TOKEN: "${{ secrets.GITHUB_TOKEN }}"
