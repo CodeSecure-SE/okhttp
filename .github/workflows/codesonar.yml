@@ -14,7 +14,7 @@ jobs:
     container:
       image: ghcr/codesecure-se/detekt-cso-builder:8.1b0
       credentials:
-        username: "mark@hermeling.org"
+        username: ${{ github.actor }}
         password: "${{ secrets.GITHUB_TOKEN }}"
     env:
       CAFILE: ".github/github.cert.pem" 
