@@ -26,7 +26,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"fwcd.kotlin"
+				"fwcd.kotlin",
+				"MS-SarifVSCode.sarif-viewer"
 			]
 		}
 	}
