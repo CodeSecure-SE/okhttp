@@ -27,7 +27,8 @@
 		"vscode": {
 			"extensions": [
 				"fwcd.kotlin",
-				"MS-SarifVSCode.sarif-viewer"
+				"MS-SarifVSCode.sarif-viewer",
+				"GitHub.vscode-pull-request-github"
 			]
 		}
 	}
