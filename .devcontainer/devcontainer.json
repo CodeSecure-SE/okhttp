@@ -28,7 +28,8 @@
 			"extensions": [
 				"fwcd.kotlin",
 				"MS-SarifVSCode.sarif-viewer",
-				"GitHub.vscode-pull-request-github"
+				"GitHub.vscode-pull-request-github",
+				"CodeSecure.vscode-codesonar"
 			]
 		}
 	}
