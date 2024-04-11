@@ -9,34 +9,17 @@
     }
     ],
     "tasks": [
-    {
-    "type": "shell",
-    "label": "Kotlin: CodeSonar analyze",
-    "command": [
-        "export PATH=$PATH:/opt/codesonar/win32-fetcher/detekt-cli/bin &&",
-        "detekt-cli -i okhttp -r sarif:codesonar-scan.sarif || true &&",
-        "codesonar analyze okhttp -hubuser ${config:codesonar.hubUser} -auth certificate -name ${input:codesonarAnalysisName} -conf-file codesonar.conf -project OSS-Projects/okhttp-GitHub/developers/${config:codesonar.hubUser}  ${config:codesonar.hubAddress} codesonar import_sarif.py codesonar-scan.sarif -include-sources 'okhttp/**/*.kt' "
-    
-    ],
-    "group": "build",
-    "detail": "builder: cargo",
-    "presentation": {
-        "showReuseMessage": false,
-        "panel": "new"
-    }
-    },
-    {
-        "type": "shell",
-        "label": "Rust: Build",
-        "command": [
-            "cargo build"
-        ],
-        "group": "build",
-        "detail": "builder: cargo",
-        "presentation": {
-            "showReuseMessage": false,
-            "panel": "new"
-        }
+        {
+            "type": "shell",
+            "label": "Kotlin: CodeSonar analyze",
+            "command": [
+                "export PATH=$PATH:/opt/codesonar/win32-fetcher/detekt-cli/bin:/opt/codesonar/codesonar/bin &&",
+                "detekt-cli -i okhttp -r sarif:codesonar-scan.sarif || true &&",
+                "codesonar analyze okhttp -hubuser ${config:codesonar.hubUser} -auth certificate -name ${input:codesonarAnalysisName} -conf-file codesonar.conf -project OSS-Projects/okhttp-GitHub/developers/${config:codesonar.hubUser}  ${config:codesonar.hubAddress} codesonar import_sarif.py codesonar-scan.sarif -include-sources 'okhttp/**/*.kt' "
+            ],
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
         }
     ]
 }
