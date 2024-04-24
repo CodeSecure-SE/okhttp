@@ -35,7 +35,7 @@ jobs:
       IS_PR: ${{ github.event_name }}
     steps:
       - name: debug
-        run: id ; ls -laR
+        run: id; ls -laR
       - name: Checkout 
         uses: actions/checkout@v4
       - name: Safe directory
