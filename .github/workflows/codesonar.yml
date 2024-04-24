@@ -2,10 +2,10 @@ name: CodeSonar
 on:
   push:                  # Only run onces the Pull request is created
     branches:
-      - 'release/**'               # Feature Branches
+      - release/**               # Feature Branches
   pull_request:
     branches:
-      - 'release/**'       
+      - release/**       
   
 jobs:
   CodeSonar_Analyze:
